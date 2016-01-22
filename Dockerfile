@@ -10,6 +10,8 @@ RUN yum install -y php70 \
                    mbstring \
                    libmcrypt-devel \
                    php70-php-mbstring \
+                   php70-php-xml \
+                   php70-php-pgsql \
                    nginx \
                    php70-php-mcrypt
 
