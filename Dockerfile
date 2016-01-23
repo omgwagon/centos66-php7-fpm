@@ -5,6 +5,8 @@ WORKDIR /root/repos
 RUN rpm -Uvh remi-release-6.rpm epel-release-latest-6.noarch.rpm pgdg-centos94-9.4-1.noarch.rpm
 
 RUN yum install -y php70 \
+                   phpunit \
+                   git \
                    php70-php-fpm \
                    postgresql94-devel \
                    mbstring \
@@ -15,7 +17,7 @@ RUN yum install -y php70 \
                    nginx \
                    php70-php-mcrypt
 
-RUN ln -s /usr/bin/php70 /usr/bin/php
+RUN ln -fs /usr/bin/php70 /usr/bin/php
 COPY ./conf/php-fpm.conf /etc/opt/remi/php70/php-fpm.d/www.conf
 
 COPY ./conf/nginx.conf /etc/nginx/conf.d/default.conf
