@@ -14,8 +14,9 @@ RUN yum install -y php70 \
                    php70-php-mbstring \
                    php70-php-xml \
                    php70-php-pgsql \
-                   nginx \
-                   php70-php-mcrypt
+                   php70-php-mcrypt \
+                   php70-php-zip \
+                   nginx
 
 RUN ln -fs /usr/bin/php70 /usr/bin/php
 COPY ./conf/php-fpm.conf /etc/opt/remi/php70/php-fpm.d/www.conf
