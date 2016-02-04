@@ -16,6 +16,7 @@ RUN yum install -y php70 \
                    php70-php-pgsql \
                    php70-php-mcrypt \
                    php70-php-zip \
+                   php70-php-dbg \
                    nginx
 
 RUN ln -fs /usr/bin/php70 /usr/bin/php
